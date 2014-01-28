@@ -4,13 +4,23 @@
         <title>Calculate Area of a Rectangle</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <script type="text/javascript">
+            function validateForm(){
+                var x = document.forms["areaInput"]["length"].toString();
+                var y = document.forms["areaInput"]["width"].toString();
+                if(x === null || y === null){
+                    alert("All fields are required");
+                    return false;
+                }
+            }
+        </script>
         <style>
             .mathBackground{
                 background-image: url('mathWallpaper.png');
                 text-align: center;
             }
             .mathDiv{
-                margin-top: 100px;
+                margin-top: 50px;
                 padding-top: 20px;
                 border-style: ridge;
                 border-color: white;
@@ -31,21 +41,27 @@
                 border-style:ridge;
                 border-width: 4px;
                 border-color:appworkspace;
+                width:100px;
+                height:40px;
+                font-size:16px;
             }
             
             .submitButton:hover{
                 cursor:pointer;
+                background-color: blue;
+                border-color:yellow;
+                border-width: 10px;
             }
             
             .textArea:hover{
                 cursor:crosshair;
                 background-color: blue;
+                border-color: yellow;
+                border-width: 5px;
                
             }
-            .textArea{
-                
-            }
-            h3{
+           
+            h2{
                 color: blue;
             }
             
@@ -53,15 +69,17 @@
         
     </head>
     <body class="mathBackground">
-        <form id ="areaInput" name="areaInput" method="POST" action="">
+        <form id ="areaInput" name="areaInput" method="POST" action="calculateArea">
         <div class="mathDiv"><h1>Enter the Dimensions of the Rectangle</h1>
-        <h3>Length</h3><textarea class="textArea" id="length" name="length"></textarea>
+        <h2>Length</h2><input type ="text" class="textArea" id="length" name="length">
         <br>
-        <h3>Width</h3><textarea class="textArea" id="width" name="width"></textarea>
-        <br><br>
-        <input id="areaSubmit" name="areaSubmit" type="submit" value="Get Area" class="submitButton">
+        <h2>Width</h2><input type ="text" class="textArea" id="width" name="width">
+        <br><br><br><br>
+        <input id="areaSubmit" name="areaSubmit" onsubmit="validateForm()" type="submit" value="Get Area" class="submitButton">
         </div>
-        <br><br>
         </form>
     </body>
+  
 </html>
+
+ 
