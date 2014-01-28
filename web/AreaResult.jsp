@@ -64,6 +64,7 @@
                 text-align: left; 
                 display:inline-block
             }
+           
         </style>
         
     </head>
@@ -79,8 +80,7 @@
                 </span>
             </div>
         <h1>Has an Area of <% out.print(df.format(area));%> units²</h1>
-        <br>
-        <p><a href="index.html"><h1>Enter Different Dimensions<h1></a>
+        <p><a style="color: skyblue; "href="index.html"><h2>Enter Different Dimensions<h2></a>
         </div>
     </body>
     

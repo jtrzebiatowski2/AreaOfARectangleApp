@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 import model.AreaCalculator;
 
 /**
@@ -49,7 +50,7 @@ public class AreaController extends HttpServlet {
         response.setContentType("text/html");
         
         String length = request.getParameter("length");
-        
+       
         double lengthAsDouble = Double.parseDouble(length);
         
         String width = request.getParameter("width");
