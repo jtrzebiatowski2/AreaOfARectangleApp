@@ -81,10 +81,10 @@
             <h1>Your Rectangle With Dimensions</h1>
             <div class="rectangle">
                 <span class="widthSpan">
-                    Width=<% out.print(width);%>
+                    Width= ${width}
                 </span>
                 <span class="lengthSpan">
-                    Length=<% out.print(length);%>
+                    Length= ${length}
                 </span>
             </div>
         <h1>Has an Area of ${areaOfRectangle} units²</h1>
