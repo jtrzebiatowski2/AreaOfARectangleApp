@@ -1,6 +1,6 @@
 package model;
 
-import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -10,12 +10,34 @@ public class AreaCalculator {
     
     private double length;
     private double width;
-    private double area;
+    private double rectangleArea;
+    private double circleArea;
+    private double radius;
+    private double triangleSideOne;
+    private double triangleSideTwo;
+    private double triangleSideThree;
+          
     
-    public double getArea(double length, double width){
-        area = length * width;
+    public double getAreaOfRectangle(double length, double width){
+        rectangleArea = length * width;
     
-        return area;
+        return rectangleArea;
+    }
+    
+    public double getAreaOfCircle(double radius){
+        
+        circleArea = 3.14159265 * (radius * radius);
+        
+        return circleArea;
+    }
+    
+    public double getThirdTriangleSideLength(double triangleSideOne, double triangleSideTwo ){
+        double sideOne = Math.pow(triangleSideOne, 2.0);
+        double sideTwo = Math.pow(triangleSideTwo, 2.0);
+        
+        triangleSideThree = (Math.pow((sideOne + sideTwo), .5));
+                
+        return triangleSideThree;
     }
 
     public double getLength() {
@@ -26,10 +48,6 @@ public class AreaCalculator {
         return width;
     }
 
-    public double getArea() {
-        return area;
-    }
-
     public void setLength(double length) {
         this.length = length;
     }
@@ -37,6 +55,7 @@ public class AreaCalculator {
     public void setWidth(double width) {
         this.width = width;
     }
+    
     
     
 }

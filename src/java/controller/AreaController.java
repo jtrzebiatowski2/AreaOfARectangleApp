@@ -57,13 +57,34 @@ public class AreaController extends HttpServlet {
         
         double widthAsDouble = Double.parseDouble(width);
         
+        String radius = request.getParameter("radius");
+        
+        double radiusAsDouble = Double.parseDouble(radius);
+        
+        String sideOne = request.getParameter("sideOne");
+        
+        double sideOneAsDouble = Double.parseDouble(sideOne);
+        
+        String sideTwo = request.getParameter("sideTwo");
+        
+        double sideTwoAsDouble = Double.parseDouble(sideTwo);
+        
         AreaCalculator areaCalc = new AreaCalculator();
         
-        double area = areaCalc.getArea(lengthAsDouble, widthAsDouble);
+        double areaOfRectanlge = areaCalc.getAreaOfRectangle(lengthAsDouble, widthAsDouble);
         
-        request.setAttribute("area", area);
+        request.setAttribute("areaOfRectangle", areaOfRectanlge);
         request.setAttribute("length", lengthAsDouble);
         request.setAttribute("width", widthAsDouble);
+        
+        double areaOfCircle = areaCalc.getAreaOfCircle(radiusAsDouble);
+        request.setAttribute("areaOfCircle", areaOfCircle);
+        request.setAttribute("radius", radiusAsDouble);
+        
+        double thirdSideOfTriangle = areaCalc.getThirdTriangleSideLength(sideOneAsDouble, sideTwoAsDouble);
+        request.setAttribute("thirdSideOfTriangle", thirdSideOfTriangle);
+        request.setAttribute("sideOne", sideOneAsDouble);
+        request.setAttribute("sideTwo", sideTwoAsDouble);
         
         RequestDispatcher view =
                 request.getRequestDispatcher(RESULT_PAGE);
