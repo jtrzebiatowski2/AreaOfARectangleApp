@@ -71,9 +71,9 @@ public class AreaController extends HttpServlet {
         
         AreaCalculator areaCalc = new AreaCalculator();
         
-        double areaOfRectanlge = areaCalc.getAreaOfRectangle(lengthAsDouble, widthAsDouble);
+        double areaOfRectangle = areaCalc.getAreaOfRectangle(lengthAsDouble, widthAsDouble);
         
-        request.setAttribute("areaOfRectangle", areaOfRectanlge);
+        request.setAttribute("areaOfRectangle", areaOfRectangle);
         request.setAttribute("length", lengthAsDouble);
         request.setAttribute("width", widthAsDouble);
         
