@@ -1,7 +1,5 @@
 package model;
 
-
-
 /**
  *
  * @author J-Tron
@@ -54,6 +52,54 @@ public class AreaCalculator {
 
     public void setWidth(double width) {
         this.width = width;
+    }
+
+    public double getCircleArea() {
+        return circleArea;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public double getRectangleArea() {
+        return rectangleArea;
+    }
+
+    public double getTriangleSideOne() {
+        return triangleSideOne;
+    }
+
+    public double getTriangleSideThree() {
+        return triangleSideThree;
+    }
+
+    public double getTriangleSideTwo() {
+        return triangleSideTwo;
+    }
+
+    public void setCircleArea(double circleArea) {
+        this.circleArea = circleArea;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public void setRectangleArea(double rectangleArea) {
+        this.rectangleArea = rectangleArea;
+    }
+
+    public void setTriangleSideOne(double triangleSideOne) {
+        this.triangleSideOne = triangleSideOne;
+    }
+
+    public void setTriangleSideThree(double triangleSideThree) {
+        this.triangleSideThree = triangleSideThree;
+    }
+
+    public void setTriangleSideTwo(double triangleSideTwo) {
+        this.triangleSideTwo = triangleSideTwo;
     }
     
     
